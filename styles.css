@@ -240,8 +240,11 @@ nav a {
 
 
 .proyecto img {
-    width: 100%;
-    display: block;
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+        height: 200px; /* Fija una altura uniforme para todas las imágenes */
+        object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo las proporciones */
+        display: block;
+
 }
 
 #fun-facts {

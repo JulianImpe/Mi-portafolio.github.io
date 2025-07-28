@@ -6,6 +6,15 @@ body {
     background: #f9f9f9;
 }
 
+section,
+header {
+    box-shadow: #1e1e1e 0px 0px 10px 0px;
+    border-radius: 25px;
+    margin: 2rem;
+    opacity: 0.8;
+}
+
+
 p,
 ul,
 h2,
@@ -15,8 +24,35 @@ a {
     font-family: "Yanone Kaffeesatz", sans-serif;
     font-style: bold;
     font-weight: 500;
+    color: #101F33;
 
 
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #AAB3BF, #101F33);
+    transition: width 0.5s cubic-bezier(.77, 0, .18, 1);
+    border-radius: 2px;
+    margin-top: 30px;
+
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 nav {
@@ -27,23 +63,25 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #101F33;
     font-size: 1.5rem;
 
 }
+
 nav a i {
-        background: linear-gradient(135deg, #b0c8f1, #2c68ce);
+    background: linear-gradient(135deg, #b0c8f1, #2c68ce);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 nav a:hover {
     transition: 0.3s;
-        scale: 1.2;
-    color:#b0c8f1;
+    scale: 1.2;
+    color: #2E4059;
 }
+
 nav a hr:hover {
-        color:#b0c8f1;
+    color: #b0c8f1;
 }
 
 h1 {
@@ -51,6 +89,7 @@ h1 {
     font-family: "Dm Serif Text", sans-serif;
     font-weight: 700;
     font-style: normal;
+    color: #f1f1f1;
 }
 
 a {
@@ -75,8 +114,33 @@ h2 {
 
 }
 
+.ui-bubble {
+    display: inline-block;
+    animation: ui-bubble-in 1.2s cubic-bezier(.77, 0, .18, 1);
+    color: #1965C2;
+}
+
+
+@keyframes ui-bubble-in {
+    0% {
+        transform: scale(0.5);
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    70% {
+        filter: blur(2px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 #imperiale {
-    background: linear-gradient(135deg, #b0c8f1, #2c68ce);
     max-width: 60%;
     border-radius: 5px;
     padding: 10px;
@@ -85,27 +149,25 @@ h2 {
 
 button {
     padding: 1rem;
-    background-color: #1f3f77;
+    background-color: #1965C2;
     color: rgb(255, 254, 254);
     border-radius: 15px;
     margin: 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-left: #78a1e9 5px solid;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
     border: none;
 }
 
 button:hover {
-    background-color: #0b2450;
+    background-color: #101F33;
     transition: 0.3s;
     cursor: pointer;
-    transform: translateY(-5px);
-    border-left: #96b5ec 5px solid;
 }
 
 header {
-    background-color: #1e1e1e;
-    color: white;
+    background-color: white;
+    color: #f1f1f1;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -155,8 +217,10 @@ nav ul li:hover {
     gap: 40px;
     text-align: center;
     padding: 60px 20px;
-    background: #eee;
+    background: linear-gradient(135deg, #b0c8f1, #2c68ce);
     padding-left: 10%;
+
+    color: white;
 }
 
 .mi-foto {
@@ -169,6 +233,7 @@ nav ul li:hover {
 
 #hero div h2 {
     font-size: 4rem;
+    color: white;
 }
 
 #foto-perfil {
@@ -178,7 +243,20 @@ nav ul li:hover {
 }
 
 #hero div p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.video-tattooNela {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    max-width: 700px;
+    max-height: 500px;
+    padding: 2rem;
+    object-fit: cover;
+    background-color: #090e18;
 }
 
 .punto-azul {
@@ -211,15 +289,14 @@ nav ul li:hover {
     padding: 10px;
     font-size: 25px;
     gap: 1rem;
+    color: white;
 }
 
 
-
 #diseñador-palabra {
-    background-color: #78a1e9;
     border-radius: 5px;
     padding: 5px;
-    color: white;
+    color: #1f3f77 !important;
 }
 
 #mis-proyectos-palabra {
@@ -232,23 +309,154 @@ nav ul li:hover {
     gap: 10px;
 }
 
-#proyectos-palabra {
-    background-color: #78a1e9;
-    border-radius: 5px;
-    padding: 10px;
+#proyectos {
+    background: linear-gradient(135deg, #b0c8f1, #2c68ce);
+
+}
+
+#proyectos h2 {
     color: white;
 }
 
-#sobre-mi {
-    background-color: #1e1e1e;
-    color: white;
+#proyectos-palabra {
+    border-radius: 5px;
+    padding: 10px;
+    color: #1f3f77 !important;
+}
+
+#herramientas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    gap: 10px;
+}
+
+#herramientas-lista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    gap: 10px;
+}
+
+#herramientas {
+    background-color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     gap: 40px;
     text-align: center;
     padding: 60px 20px;
+}
 
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    gap: 10px;
+}
+
+.servicio {
+    position: relative;
+    min-width: 350px; /* Igual o mayor al width del popup */
+    min-height: 220px;
+}
+.servicio .video-popup-izq video{
+    max-width: 80%;
+    max-height: 80%;
+}
+.servicio .video-popup-der video{
+    max-width: 80%;
+    max-height: 80%;
+}
+.video-popup-der{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 400px;
+    max-height: 400px;
+        opacity: 0.9;
+}
+.video-popup-der video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.video-popup-izq {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 95%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    opacity: 0.9;
+}
+.video-popup-izq video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.servicio:hover .video-popup-izq  {
+    display: block;
+    animation: video-popup-in 0.5s ease-in-out;
+
+}
+.servicio:hover .video-popup-der  {
+    display: block;
+        animation: video-popup-in 0.5s ease-in-out;
+
+}
+
+.servicio:hover .video-normal {
+    opacity: 0.2;
+    /* Opcional: para que se note el cambio */
+}
+
+.tools:hover .icono-color {
+    display: inline;
+}
+
+
+
+.tools .icono-color {
+    display: none;
+}
+
+.tools:hover .icono-gris {
+    display: none;
+}
+
+.tools:hover .icono-color {
+    display: inline;
+}
+
+.tools img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 10px;
+    object-fit: cover;
 }
 
 #sobre-mi-palabra {
@@ -258,13 +466,9 @@ nav ul li:hover {
 
 #sobre-mi div h2 {
     font-size: 4rem;
+    color: white;
 }
 
-#lista-sobre-mi {
-    list-style: none;
-    padding: 0;
-    font-size: 1.5rem;
-}
 
 #mi-palabra {
     background-color: #78a1e9;
@@ -277,6 +481,19 @@ nav ul li:hover {
 
 video {
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    border-radius: 15px;
+}
+
+.video-tattooNela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+    max-width: 80%;
+    max-height: 60%;
+    object-fit: cover;
 }
 
 #fun-facts video {
@@ -288,11 +505,12 @@ video {
     margin-right: 5px;
 }
 
-#servicios video {
+#servicios .video-normal {
     border-radius: 2rem;
     width: 30%;
     height: auto;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    padding: 1rem;
 }
 
 #servicios h3 {
@@ -301,28 +519,129 @@ video {
 }
 
 #servicios {
-    background-color: #1e1e1e;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 .servicios-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    gap: 2rem;
+    padding: 2rem;
+
 }
-#servicios p{
+
+#servicios p {
     font-size: 1.5rem;
+
 }
+
+.celeste {
+    color: #78a1e9;
+    margin: 0.5rem;
+}
+
+.black {
+    color: #101F33;
+    font-style: oblique;
+    text-underline-offset: 30px;
+    /* Ajusta la separación del underline */
+    text-decoration-thickness: 6px;
+    font-style: oblique;
+    /* Ajusta el grosor para que coincida con el overline */
+}
+
+.black {
+    position: relative;
+    display: inline-block;
+    font-weight: 1000;
+}
+
+.black::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    /* Ajusta la separación */
+    width: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #101F33, #A7C8F2);
+    border-radius: 2px;
+    animation: underline-in 2s 1s forwards cubic-bezier(.77, 0, .18, 1);
+}
+
+@keyframes underline-in {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.azul-oscuro {
+    position: relative;
+    display: inline-block;
+    font-style: oblique;
+}
+
+.azul-oscuro::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    /* Ajusta la separación */
+    width: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #101F33, #64758C);
+    border-radius: 2px;
+    animation: underline-in 3s 2s forwards cubic-bezier(.77, 0, .18, 1);
+}
+
+.blanco {
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    /* Igual grosor */
+    text-underline-offset: 15px;
+    /* No afecta el overline, pero puedes dejarlo igual para consistencia */
+}
+
+.azul {
+    color: #1965C2;
+    text-decoration: overline;
+    text-decoration-thickness: 6px;
+    /* Igual grosor */
+    text-underline-offset: 10px;
+    /* No afecta el overline, pero puedes dejarlo igual para consistencia */
+}
+
+.azul-oscuro {
+    color: #2E4059;
+    text-decoration-thickness: 6px;
+    /* Igual grosor */
+    text-underline-offset: 10px;
+    /* No afecta el overline, pero puedes dejarlo igual para consistencia */
+}
+
+.azul-mas-oscuro {
+    color: #000c20;
+    text-decoration: overline;
+    text-decoration-thickness: 6px;
+    /* Igual grosor */
+    text-underline-offset: 10px;
+    /* No afecta el overline, pero puedes dejarlo igual para consistencia */
+}
+
 .proyecto {
     background: white;
     border-radius: 10px;
@@ -331,6 +650,7 @@ video {
     max-width: 300px;
     text-align: center;
     transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .proyecto:hover {
@@ -389,6 +709,18 @@ video {
     padding: 10px;
     font-size: 25px;
     gap: 10px;
+}
+
+#fun-facts-lista li img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 5%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+#fun-facts-lista li {
+    margin-bottom: 1rem;
 }
 
 #facts {
@@ -472,6 +804,10 @@ footer {
     text-align: center;
 }
 
+footer p {
+    color: white;
+}
+
 /* Circulitos flotando en el fondo */
 .floating-circles {
     position: fixed;
@@ -481,7 +817,7 @@ footer {
     height: 100vh;
     pointer-events: none;
     /* No bloquea clics */
-    z-index: 0;
+    z-index: -1;
 }
 
 .floating-circles .circle {

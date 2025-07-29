@@ -373,6 +373,9 @@ nav ul li:hover {
     position: relative;
     min-width: 350px; /* Igual o mayor al width del popup */
     min-height: 220px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .servicio .video-popup-izq video{
     max-width: 80%;
@@ -388,10 +391,9 @@ nav ul li:hover {
     top: 50%;
     left: 95%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: -2;
     max-width: 400px;
     max-height: 400px;
-        opacity: 0.9;
 }
 .video-popup-der video{
     width: 100%;
@@ -405,12 +407,12 @@ nav ul li:hover {
     top: 50%;
     right: 95%;
     transform: translateY(-50%);
-    z-index: 2;
     max-width: 400px;
     max-height: 400px;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
-    opacity: 0.9;
+
 }
+
 .video-popup-izq video{
     width: 100%;
     height: 100%;
@@ -428,10 +430,25 @@ nav ul li:hover {
         animation: video-popup-in 0.5s ease-in-out;
 
 }
+.celular{
+    object-fit: cover;
+    border-radius: 15px;
+    background: #090e18;      /* Fondo negro */
+    padding: 0.3rem;            /* Ajusta el valor para agrandar el padding */
 
+    }
 .servicio:hover .video-normal {
-    opacity: 0.2;
-    /* Opcional: para que se note el cambio */
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    scale: 1.1;
+    rotate: -5deg;
+    
+}
+.servicio:hover .video-normal-der {
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+    scale: 1.1;
+    rotate: 5deg;
 }
 
 .tools:hover .icono-color {
@@ -506,12 +523,22 @@ video {
 }
 
 #servicios .video-normal {
-    border-radius: 2rem;
     width: 30%;
     height: auto;
-    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
     padding: 1rem;
+        border: solid 4px #1965C2;
+    border-radius: 2rem;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
 }
+#servicios .video-normal-der {
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+        border: solid 4px #1965C2;
+    border-radius: 2rem;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+}
+
 
 #servicios h3 {
     font-size: 2rem;
@@ -534,8 +561,9 @@ video {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    gap: 2rem;
     padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
 
 }
 

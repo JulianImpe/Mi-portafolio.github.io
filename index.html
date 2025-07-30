@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <div class="floating-circles">
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
@@ -22,13 +23,10 @@
     </div>
     <header class="scroll-section">
         <nav>
-            <a href="#proyectos">Mis proyectos
-            </a>
-            <a href="#servicios"> ¿Qué ofrezco?
-            </a>
-            <a href="#fun-facts"> ¿Quién soy?
-            </a>
-
+            <a href="#proyectos" data-es="Mis proyectos" data-en="My Projects">Mis proyectos</a>
+            <a href="#servicios" data-es="¿Qué ofrezco?" data-en="What do I offer?">¿Qué ofrezco?</a>
+            <a href="#fun-facts" data-es="¿Quién soy?" data-en="Who am I?">¿Quién soy?</a>
+            <button id="lang-btn"><img id="lang-icon" src="images/Iconos/united-states.png" alt="eeuu"> </button>
         </nav>
 
         <div class="animate__animated animate__slideInDown">
@@ -39,26 +37,31 @@
             </div>
             <button class="btn-contacto-wpp" href="whatsapp://send?phone=5491144278014"
                 onclick="setTimeout(()=>{ window.location='https://wa.me/5491123053347'; }, 100);"
-                rel="noopener noreferrer">Diseñemos juntos</button>
+                rel="noopener noreferrer" data-es="Diseñemos juntos" data-en="Let's design together">Diseñemos
+                juntos</button>
         </div>
 
     </header>
     <section id="hero" class="scroll-section">
-        <div>
+        <div class="hero-diseñador">
             <div id="diseñador-web">
-                <h2>Diseñador</h2>
-                <h2><strong class="black"> Web</strong></h2>
-
+                <h2 data-es="Diseñador" data-en="Designer">Diseñador</h2>
+                <h2><strong class="black" data-es="Web" data-en="Web"> Web</strong></h2>
             </div>
-            <p>Diseño sitios web <strong class="black">modernos</strong>, <strong class="black">responsivos</strong> y
+            <p class="texto-principal-hero" data-es="Diseño sitios web modernos, responsivos y funcionales."
+                data-en="I design modern, responsive, and functional websites.">
+                Diseño sitios web <strong class="black">modernos</strong>, <strong class="black">responsivos</strong> y
                 <strong class="black">funcionales.</strong>
             </p>
-            <p>Mi enfoque profesional está evolucionando hacia el diseño <strong>UI/UX</strong>, donde busco aportar
+            <p data-es="Mi enfoque profesional está evolucionando hacia el diseño UI/UX, donde busco aportar valor a través de interfaces modernas y usables."
+                data-en="My professional focus is shifting toward UI/UX design, aiming to bring value through modern, user-friendly interfaces.">
+                Mi enfoque profesional está evolucionando hacia el diseño <strong>UI/UX</strong>, donde busco aportar
                 valor a través de interfaces modernas y
-                usables. </p>
+                usables.
+            </p>
             <button class="btn-contacto-wpp" href="whatsapp://send?phone=5491144278014"
                 onclick="setTimeout(()=>{ window.location='https://wa.me/5491123053347'; }, 100);"
-                rel="noopener noreferrer">¡A diseñar!</button>
+                rel="noopener noreferrer" data-es="¡A diseñar!" data-en="Let's create!">¡A diseñar!</button>
         </div>
         <div class="video-tattooNela-container">
             <video class="video-tattooNela" src="images/tatowe.mp4" autoplay loop muted playsinline
@@ -69,137 +72,118 @@
         </div>
     </section>
     <section id="servicios">
-        <h2> ¿Qué <strong class="azul"> ofrezco?</strong> </h2>
+        <h2>
+            <span data-es="¿Qué " data-en="What do I ">¿Qué </span>
+            <strong class="azul" data-es="ofrezco?" data-en="offer?">ofrezco?</strong>
+        </h2>
         <div class="servicios-container">
             <div class="servicio">
                 <img class="video-normal" src="images/Iconos/responsive.jpg" alt="">
-                <h3 class="black">Diseño responsivo
-                </h3>
-                <p>Creo sitios web responsivos y atractivos, adaptados a tus necesidades.</p>
-                <video class="video-popup-izq" class="celular" src="images/tatowe.mp4" autoplay loop muted playsinline
+                <h3 class="black" data-es="Diseño responsivo" data-en="Responsive Design">Diseño responsivo</h3>
+                <p data-es="Creo sitios web responsivos y atractivos, adaptados a tus necesidades."
+                    data-en="I create responsive and visually appealing websites tailored to your needs.">
+                    Creo sitios web responsivos y atractivos, adaptados a tus necesidades.
+                </p>
+                <video class="video-popup-izq celular" src="images/tatowe.mp4" autoplay loop muted playsinline
                     alt="responsive-design"></video>
             </div>
             <div class="servicio">
-                <img class="video-normal-der" class="der" class="celular" src="images/Iconos/html.jpg" alt="">
-                <h3 class="black">Maquetación HTML/CSS/JS
+                <img class="video-normal-der der celular" src="images/Iconos/html.jpg" alt="">
+                <h3 class="black" data-es="Maquetación HTML/CSS/JS" data-en="HTML/CSS/JS Layout">Maquetación HTML/CSS/JS
                 </h3>
-                <p>Desarrollo de identidades visuales y elementos gráficos únicos.</p>
-                <video class="video-popup-der" class="celular" src="images/videos/diseñandoenhtml.mp4" autoplay loop
-                    muted playsinline alt="responsive-design"></video>
+                <p data-es="Desarrollo de identidades visuales y elementos gráficos únicos."
+                    data-en="Development of unique visual identities and graphic elements.">
+                    Desarrollo de identidades visuales y elementos gráficos únicos.
+                </p>
+                <video class="video-popup-der celular" src="images/videos/diseñandoenhtml.mp4" autoplay loop muted
+                    playsinline alt="responsive-design"></video>
             </div>
             <div class="servicio">
                 <img class="video-normal" src="images/Iconos/sitio-web-2.png" alt="">
-                <h3 class="black">Sitios autogestionables
-
+                <h3 class="black" data-es="Sitios autogestionables" data-en="Self-managed Sites">Sitios autogestionables
                 </h3>
-                <p>Diseño y configuro tiendas visuales en plataformas como Empretienda.</p>
-                <video class="video-popup-izq" class="celular" src="images/videos/poluxresponsive.mp4" autoplay loop
-                    muted playsinline alt="responsive-design"></video>
+                <p data-es="Diseño y configuro tiendas visuales en plataformas como Empretienda."
+                    data-en="I design and configure visual shops on platforms like Empretienda.">
+                    Diseño y configuro tiendas visuales en plataformas como Empretienda.
+                </p>
+                <video class="video-popup-izq celular" src="images/videos/poluxresponsive.mp4" autoplay loop muted
+                    playsinline alt="responsive-design"></video>
             </div>
             <div class="servicio">
                 <img class="video-normal-der" src="images/Iconos/diseno-grafico.png" alt="">
-                <h3 class="black">Diseño pre-maquetado
-
-                </h3>
-                <p>Construyo tu sitio con herramientas como Figma o Canva para asegurar un buen resultado.</p>
-                <video class="video-popup-der" src="images/videos/usandoFgima.mp4" autoplay loop muted
-                    playsinline alt="responsive-design"></video>
-            </div>
-    </section>
-
-    <section id="proyectos" class="scroll-section">
-        <div id="mis-proyectos-palabra">
-            <h2>Mis</h2>
-            <h2> <strong class="black">Proyectos </strong></h2>
-        </div>
-        <div class="galeria">
-            <div class="proyecto">
-                <a href="https://poluxdecoraciones.empretienda.com.ar/" target="_blank">
-                    <img src="images/Polux.png" alt="poluxdecoraciones-website" loading="lazy" />
-                    <h3>PoluxDecoraciones (Público) </h3>
-                    <p>Diseño para un emprendimiento de resina /Empretienda</p>
-                    <h4>En progreso</h4>
-                </a>
-
-
-            </div>
-            <div class="proyecto">
-                <img src="images/home comunico.jpeg" alt="braille-website" loading="lazy" />
-                <h3>Comunico (Privado) </h3>
-                <p>Diseño responsive para un juego de braille</p>
-                <h4>Completado</h4>
-            </div>
-            <div class="proyecto">
-                <a href="https://julianimpe.github.io/TattooNela.github.io/">
-                    <img src="images/tattoonelaWeb.png" alt="tattoo-website" loading="lazy" />
-                    <h3>Tattoonela (Público) </h3>
-                    <p>Sitio responsive para un estudio de tatuaje</p>
-                    <h4>Completado</h4>
-                </a>
+                <h3 class="black" data-es="Diseño pre-maquetado" data-en="Pre-layout Design">Diseño pre-maquetado</h3>
+                <p data-es="Construyo tu sitio con herramientas como Figma o Canva para asegurar un buen resultado."
+                    data-en="I build your site using tools like Figma or Canva to ensure great results.">
+                    Construyo tu sitio con herramientas como Figma o Canva para asegurar un buen resultado.
+                </p>
+                <video class="video-popup-der" src="images/videos/usandoFgima.mp4" autoplay loop muted playsinline
+                    alt="responsive-design"></video>
             </div>
         </div>
-
     </section>
 
     <section id="herramientas" class="scroll-section">
         <div id="herramientas-container">
-            <h2>Lo que uso para <strong class="azul">crear</strong></h2>
+            <h2>
+                <span data-es="Lo que uso para " data-en="What I use to "> Lo que uso para </span>
+                <strong class="azul" data-es="crear" data-en="create">crear</strong>
+            </h2>
             <ul id="herramientas-lista">
                 <li class="tools"><img src="images/Iconos/figma.png" alt="figma-logo" class="icono-gris"> <img
                         src="images/Iconos/figma-color.png" class="icono-color" alt="figma-color">Figma</li>
                 <li class="tools"><img src="images/Iconos/canva_logo_icon_145428.png" alt="canva-logo"
                         class="icono-gris"> <img src="images/Iconos/canva-color.png" alt="canva-color"
-                        class="icono-color"> Canva</li>
+                        class="icono-color">Canva</li>
                 <li class="tools"><img src="images/Iconos/html-5.png" alt="html-logo" class="icono-gris"> <img
                         src="images/Iconos/html-color.png" alt="html-color" class="icono-color">HTML</li>
                 <li class="tools"><img src="images/Iconos/css-3.png" alt="css-logo" class="icono-gris"> <img
                         src="images/Iconos/css-3-color.png" alt="css-color" class="icono-color">CSS</li>
                 <li class="tools"> <img src="images/Iconos/js.png" alt="javascript-logo" class="icono-gris"> <img
-                        src="images/Iconos/js.color.png" alt="js-color" class="icono-color"> JavaScript
-                </li>
+                        src="images/Iconos/js.color.png" alt="js-color" class="icono-color">JavaScript</li>
                 <li class="tools"><img src="images/Iconos/angular.png" alt="angular-logo" class="icono-gris"> <img
-                        src="images/Iconos/angular-color.png" alt="angular-color" class="icono-color">Angular
-                </li>
+                        src="images/Iconos/angular-color.png" alt="angular-color" class="icono-color">Angular</li>
                 <li class="tools"><img src="images/Iconos/compras-en-la-nube.png" alt="web builders-logo"
                         class="icono-gris"> <img src="images/Iconos/web-builder-color.jpg" alt="web-builder-color"
-                        class="icono-color"> Web builders</li>
+                        class="icono-color">Web builders</li>
             </ul>
         </div>
     </section>
 
     <section id="fun-facts" class="scroll-section">
         <div id="fun-facts-palabra">
-
-
-            <h2>¿Quién</h2>
-            <h2> <strong class="azul">soy?</strong></h2>
+            <h2 data-es="¿Quién" data-en="Who"> ¿Quién</h2>
+            <h2><strong class="azul" data-es="soy?" data-en="am I?">soy?</strong></h2>
         </div>
         <div id="fun-facts-lista">
             <ul>
-                <li> <img src="images/Iconos/uxui.jpg" alt="diseño-uxui"> Diseñador UI/UX.</li>
+                <li data-es="Diseñador UI/UX." data-en="UI/UX Designer."><img src="images/Iconos/uxui.jpg"
+                        alt="diseño-uxui"> Diseñador UI/UX.</li>
                 <hr>
-                <li> <img src="images/Iconos/taza-de-chocolate-caliente.png" alt="cafe"> Tomo café mientras diseño mis
-                    webs. </li>
-                <hr>
-                <li><img src="images/Iconos/juego-de-cartas.png" alt="carta"> Me encantan los juegos de
-                    cartas.
+                <li data-es="Tomo café mientras diseño mis webs." data-en="I drink coffee while designing websites."><img src="images/Iconos/taza-de-chocolate-caliente.png" alt="cafe">                     Tomo café mientras diseño mis
+                    webs.
                 </li>
                 <hr>
-                <li><img src="images/Iconos/montana.png" alt="montana"> Sueño con trabajar con una vista
-                    en las montañas.
-                </li>
+                <li data-es="Me encantan los juegos de cartas." data-en="I love card games."><img
+                        src="images/Iconos/juego-de-cartas.png" alt="carta"> Me encantan los juegos de cartas.</li>
                 <hr>
-                <li> <img src="images/Iconos/perro.png" alt="perro">Tengo una mascota que se llama Sol y la amo </li>
+                <li data-es="Sueño con trabajar con una vista en las montañas."
+                    data-en="I dream of working with a mountain view."><img src="images/Iconos/montana.png"
+                        alt="montana"> Sueño con trabajar con una vista en las montañas.</li>
+                <hr>
+                <li data-es="Tengo una mascota que se llama Sol y la amo"
+                    data-en="I have a pet named Sol and I love her."><img src="images/Iconos/perro.png"
+                        alt="perro">Tengo una mascota que se llama Sol y la amo</li>
                 <hr>
             </ul>
         </div>
-        <img src="images/mountain.jpg" alt="de-perfil" id="montaña" />
+        <img src="images/Yo.jpg" alt="de-perfil" id="montaña" />
     </section>
 
-
     <footer>
-        <p>© 2025 Julian Imperiale. Todos los derechos reservados.</p>
-        <p>Portafolio en progreso...</p>
+        <p data-es="© 2025 Julian Imperiale. Todos los derechos reservados."
+            data-en="© 2025 Julian Imperiale. All rights reserved.">© 2025 Julian Imperiale. Todos los derechos
+            reservados.</p>
+        <p data-es="Portafolio en progreso..." data-en="Portfolio in progress...">Portafolio en progreso...</p>
     </footer>
     <script src="index.js"></script>
 </body>

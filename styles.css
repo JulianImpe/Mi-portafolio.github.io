@@ -371,36 +371,42 @@ nav ul li:hover {
 
 .servicio {
     position: relative;
-    min-width: 350px; /* Igual o mayor al width del popup */
+    min-width: 350px;
+    /* Igual o mayor al width del popup */
     min-height: 220px;
-        display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-.servicio .video-popup-izq video{
+
+.servicio .video-popup-izq video {
     max-width: 80%;
     max-height: 80%;
 }
-.servicio .video-popup-der video{
+
+.servicio .video-popup-der video {
     max-width: 80%;
     max-height: 80%;
 }
-.video-popup-der{
+
+.video-popup-der {
     display: none;
     position: absolute;
     top: 50%;
     left: 95%;
     transform: translateY(-50%);
-    z-index: -2;
+    z-index: 2;
     max-width: 400px;
     max-height: 400px;
 }
-.video-popup-der video{
+
+.video-popup-der video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
+
 .video-popup-izq {
     display: none;
     position: absolute;
@@ -410,40 +416,37 @@ nav ul li:hover {
     max-width: 400px;
     max-height: 400px;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+        z-index: 2;
 
 }
 
-.video-popup-izq video{
+.video-popup-izq video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.servicio:hover .video-popup-izq  {
+.servicio:hover .video-popup-izq {
     display: block;
     animation: video-popup-in 0.5s ease-in-out;
 
 }
-.servicio:hover .video-popup-der  {
+
+.servicio:hover .video-popup-der {
     display: block;
-        animation: video-popup-in 0.5s ease-in-out;
+    animation: video-popup-in 0.5s ease-in-out;
 
 }
-.celular{
-    object-fit: cover;
-    border-radius: 15px;
-    background: #090e18;      /* Fondo negro */
-    padding: 0.3rem;            /* Ajusta el valor para agrandar el padding */
 
-    }
 .servicio:hover .video-normal {
     border-radius: 15px;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
     scale: 1.1;
     rotate: -5deg;
-    
+
 }
+
 .servicio:hover .video-normal-der {
     border-radius: 15px;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
@@ -526,15 +529,16 @@ video {
     width: 30%;
     height: auto;
     padding: 1rem;
-        border: solid 4px #1965C2;
+    border: solid 4px #1965C2;
     border-radius: 2rem;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
 }
+
 #servicios .video-normal-der {
     width: 30%;
     height: auto;
     padding: 1rem;
-        border: solid 4px #1965C2;
+    border: solid 4px #1965C2;
     border-radius: 2rem;
     box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
 }
@@ -697,8 +701,8 @@ video {
     object-fit: cover;
     /* Recorta la imagen para llenar el contenedor manteniendo las proporciones */
     display: block;
-
 }
+
 
 #fun-facts {
     background-color: #ffffff;
@@ -766,12 +770,29 @@ video {
     right: 5%;
 }
 
+#lang-btn {
+    color: white;
+    border-radius: 20%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
+}
+
+#lang-btn img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
 #montaña {
     position: absolute;
     width: 25%;
     border-radius: 5px;
     margin: 20px auto;
     left: 15%;
+    box-shadow: 0 8px 18px rgba(255, 254, 254, 0.1);
 }
 
 .btn-contacto {
@@ -901,204 +922,267 @@ footer p {
 
 /*Responsive Styles*/
 
-/* Estilos responsive solo para móviles */
+/* Estilos responsive solo para móviles muy pequeños */
 @media (max-width: 360px) {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
-    html,
-    body {
+    html, body {
         overflow-x: hidden;
-        /* Evita el scroll horizontal */
     }
-
     .mi-nombre {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
     }
-
-    /* Ajustes de texto */
     .mi-foto {
         border-radius: 100%;
         width: 200px;
         height: 100px;
     }
-
-    .mi-nombre h1 {
-        font-size: 2.3rem;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 30px !important;
-        padding: 5px;
-    }
-
-    li {
-        font-size: 15px;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
+    .mi-nombre h1 { font-size: 2.3rem; }
+    h1 { font-size: 40px; }
+    h2 { font-size: 30px !important; padding: 5px; }
+    li { font-size: 15px; }
+    nav a { font-size: 12px; }
+    img { max-width: 100%; height: auto; display: block; }
 }
 
+/* Móviles pequeños */
 @media (max-width: 480px) {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-
-    html,
-    body {
-        overflow-x: hidden;
-        /* Evita el scroll horizontal */
-    }
-
+    html, body { overflow-x: hidden; }
     .mi-nombre {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
     }
-
-
-    /* Ajustes de texto */
-    h1 {
-        font-size: 35px;
-    }
-
-    h2 {
-        font-size: 25px !important;
-        padding: 5px;
-    }
-
-    li {
-        font-size: 17px;
-    }
-
-    nav a {
-        font-size: 10px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-
-    #hero div p {
-        font-size: 12px;
-    }
-
-    #diseñador-web {
-        font-size: 15px;
-    }
-
-    .btn-contacto {
-        width: 20px;
-        height: 20px;
-    }
-
-    .btn-contacto i {
-        font-size: 10px;
-    }
-
-    #mis-proyectos-palabra {
-        font-size: 15px;
-    }
-
-    #fun-facts-palabra,
-    #fun-facts-lista {
-        font-size: 15px;
-    }
-
-    #sobre-mi div h2 {
-        font-size: 20px;
-    }
-
+    h1 { font-size: 35px; }
+    h2 { font-size: 25px !important; padding: 5px; }
+    li { font-size: 17px; }
+    nav a { font-size: 10px; }
+    img { max-width: 100%; height: auto; display: block; }
+    #hero div p { font-size: 1.2rem; }
+    .texto-principal-hero{margin-bottom: 1rem;}
+    #diseñador-web { font-size: 15px; }
+    .btn-contacto { width: 20px; height: 20px; }
+    .btn-contacto i { font-size: 10px; }
+    #mis-proyectos-palabra { font-size: 15px; }
+    #fun-facts-palabra, #fun-facts-lista { font-size: 15px; }
+    #sobre-mi div h2 { font-size: 20px; }
     #sobre-mi {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-
-    #lista-sobre-mi {
-        font-size: 12px;
-    }
-
-    /* Ajustes de imágenes */
-    #foto-perfil,
-    .mi-foto {
-        width: 500px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Ajuste de nombre */
-    .mi-nombre {
-        padding: 10px;
-    }
-
-    /* Ajuste de hero */
+    #lista-sobre-mi { font-size: 12px; }
+    #foto-perfil, .mi-foto { width: 500px; }
+    img { max-width: 100%; height: auto; }
+    .mi-nombre { padding: 10px; }
     #hero {
         flex-direction: column;
         align-items: center;
         padding: 20px;
         gap: 20px;
     }
-
-    #fun-facts {
-        margin-left: 0px;
-    }
-
-    .mi-foto,
-    #foto-perfil,
-    #tazita-de-cafe,
-    #montaña {
+    #fun-facts { margin-left: 0px; }
+    .mi-foto, #foto-perfil, #tazita-de-cafe, #montaña {
         width: 90%;
         margin: 10px auto;
         position: static;
-        /* especial para #tazita-de-cafe y #montaña, para que no se monten mal */
     }
+}
 
-    @media screen and (max-width: 768px) {
-        #hero {
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .mi-foto {
-            width: 90%;
-        }
-
-        h1 {
-            font-size: 60px;
-        }
-
-        h2 {
-            font-size: 30px;
-        }
+/* TABLET (≥600px y <900px) */
+@media (max-width: 900px) {
+    body { font-size: 16px; }
+    header, section {
+        margin: 1rem;
+        border-radius: 18px;
+        padding: 1.5rem 0.5rem;
     }
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+    nav a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
+    .mi-nombre {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem 0.5rem;
+    }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    .servicios-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .servicio {
+        min-width: unset;
+        padding: 1rem 0.5rem 1.5rem 0.5rem;
+    }
+    #herramientas-lista {
+        flex-direction: row;
+        gap: 0.7rem;
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+    .tools img {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-right: 0.5rem;
+    }
+    #fun-facts-palabra, #fun-facts-lista {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+    }
+    #montaña, .mi-foto, #foto-perfil {
+        width: 60vw;
+        max-width: 320px;
+        position: static;
+        margin: 1rem auto;
+        display: block;
+    }
+}
 
+/* MOBILE (≤600px) */
+@media (max-width: 600px) {
+    body { font-size: 15px; }
+    header, section {
+        margin: 0.5rem;
+        border-radius: 12px;
+        padding: 1rem 0.2rem;
+    }
+    nav {
+        flex-direction: row;
+        gap: 0.3rem;
+        padding: 0.3rem 0;
+    }
+    #lang-icon { width: 20px; height: 20px; }
+    #lang-btn { width: 2.5rem; height: 2.5rem; }
+    button {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+    nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+    }
+    .mi-nombre {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 1rem 0.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+        word-break: break-word;
+    }
+    h2 {
+        font-size: 1.2rem;
+        padding: 0.2rem 0;
+    }
+    h3 { font-size: 1rem; }
+    .video-tattooNela {
+        max-width: 55%;
+        height: auto;
+        padding: 0.2rem;
+    }
+    .servicios-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    .servicio {
+        min-width: unset;
+        padding: 0.7rem 0.2rem 1rem 0.2rem;
+    }
+    #fun-facts-lista li {
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    #herramientas-lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+    .tools img {
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-right: 0.3rem;
+    }
+    #hero p { font-size: 0.9rem; }
+    #fun-facts-palabra, #fun-facts-lista {
+        flex-direction: row;
+        gap: 0.3rem;
+        font-size: 1rem;
+    }
+    #montaña, .mi-foto, #foto-perfil {
+        width: 90vw;
+        max-width: 220px;
+        position: static;
+        margin: 0.7rem auto;
+        display: block;
+    }
+    .video-popup-izq video,
+    .video-popup-der video {
+        max-width: 90%;
+        height: auto;
+        padding: 0.2rem;
+        border-radius: 0.7rem;
+        opacity: 0.9;
+    }
+    .video-popup-izq
+    {
+        max-width: 80vw;
+        max-height: 50vw;
+        min-width: 110px;
+        min-height: 70px;
+        position: absolute;
+        top: 50%;
+        right: 70%;
+        transform: translateY(-50%);
+        opacity: 0.9;
+    }
+    .video-popup-der {
+                max-width: 80vw;
+        max-height: 50vw;
+        min-width: 110px;
+        min-height: 70px;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translateY(-50%);
+        opacity: 0.9;
+    }
+    footer {
+        font-size: 0.9rem;
+        padding: 0.7rem 0.2rem;
+    }
+    .floating-circles .circle {
+        width: 30px;
+        height: 30px;
+    }
 }

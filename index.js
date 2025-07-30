@@ -21,5 +21,22 @@ document.querySelectorAll("[data-es]").forEach(el => {
     } else {
         el.textContent = el.getAttribute(`data-${currentLang}`);
     }
+    const designerWeb = document.getElementById("diseñador-web");
+const palabraIzq = document.getElementById("palabra-izq");
+const palabraDer = document.getElementById("palabra-der");
+
+if (designerWeb && palabraIzq && palabraDer) {
+    if (currentLang === "en") {
+        // Orden: Web Designer
+        if (designerWeb.firstElementChild !== palabraIzq) {
+            designerWeb.insertBefore(palabraIzq, palabraDer);
+        }
+    } else {
+        // Orden: Diseñador Web
+        if (designerWeb.firstElementChild !== palabraIzq) {
+            designerWeb.insertBefore(palabraIzq, palabraDer.nextSibling);
+        }
+    }
+}
 });
 });
